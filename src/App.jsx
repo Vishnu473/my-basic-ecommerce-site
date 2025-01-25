@@ -13,6 +13,7 @@ import Cart from './Pages/Cart';
 import Auth from './Pages/Auth';
 import Login from './Components/Login';
 import SignUp from './Components/SignUp';
+import ProductDetail from './Pages/ProductDetail';
 
 const routes = createBrowserRouter([
   {
@@ -20,8 +21,16 @@ const routes = createBrowserRouter([
     element:<RootLayout />,
     children:[
       {
-        index: true,
-        element:<ProductList />
+        index:true,
+        element:<ProductList />//Replace later this with other element
+      },
+      {
+        path:'products',
+        element:<ProductList />,
+      },
+      {
+        path:'products/:id',
+        element: <ProductDetail />
       },
       {
         path:'about',

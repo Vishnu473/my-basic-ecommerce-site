@@ -10,19 +10,18 @@ const ProductList = () => {
   const [errorMsg, setErrorMsg] = useState(null);
 
   useEffect(() => {
-    const fetchData = async() => {
+    const fetchProductListData = async() => {
       try {
         const result = await getProductList();
         setProductData(result);
         setIsLoading(false);
-        console.log(result);
       } catch (error) {
         setIsLoading(false);
         setErrorMsg(error);
       }
     };
 
-    fetchData();
+    fetchProductListData();
   }, []);
   
   if(isLoading){
