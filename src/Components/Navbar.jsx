@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "../assets/logo.svg";
 import { NavLink, Link } from "react-router-dom";
 import styles from '../Styles/Navbar.module.css'
 
 const Navbar = () => {
+
+  
   return (
     <>
       <div className={styles.header}>
@@ -12,6 +14,7 @@ const Navbar = () => {
           isActive ? styles.activeLink : styles.navLink}><img src={logo} alt="logo" style={{ height: 40 }} /></NavLink>
           <h2>Shoppy</h2>
         </div>
+        
         <div className={styles.linkContainer}>
           <div className={styles.link}><NavLink to="/my-basic-ecommerce-site/about" className={({ isActive }) => 
           isActive ? styles.activeLink : styles.navLink}>About</NavLink></div>
