@@ -1,0 +1,149 @@
+.productDetailCenter{
+    display:flex;
+    justify-content: center;
+}
+.productDetailContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    width:80%;
+  }
+  
+  .productDetailHeader {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .productThumbnail {
+    width: 240px;
+    object-fit: cover;
+  }
+  
+  .productInfo {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    flex-grow: 1;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
+  .price {
+    display: flex;
+    flex-direction:column;
+    gap:8px;
+    font-size: 1.25rem;
+  }
+  .priceCart{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    padding:0 10px;
+    align-items: end;
+    justify-content: space-between;
+  }
+  .originalPrice {
+    text-decoration: line-through;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight:500;
+    color:gray;
+  }
+  .discount{
+    font-size:16px;
+    color:green;
+    font-weight: 500;
+  }
+  .discountPrice {
+    font-weight: bold;
+    font-size: 28px;
+  }
+  .btnDiv{
+    display:flex;
+    justify-content: center;
+  }
+  .rmvBtn{
+    font-size:16px;
+    outline:none;
+    border:none;
+    background-color:black;
+    padding:8px 10px;
+    border-radius: 4px;
+    color:white;
+  }
+  .mathBtn{
+    font-size: 20px;
+    outline:none;
+    border:1px solid black;
+    background-color:White;
+    padding:5px 10px;
+    border-radius: 4px;
+  }
+  .btn{
+    font-size: 16px;
+    font-weight: 600;
+    color:black;
+    background-color: white;
+    outline: none;
+    border:1px solid black;
+    padding:10px;
+    border-radius: 5px;
+}
+  .productAdditionalInfo{
+    display:flex;
+    justify-content: space-between;
+    padding-right: 40px;
+  }
+  .productDetails ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .productDetails li {
+    margin-bottom: 10px;
+  }
+  
+  .productReviews {
+    margin-top: 20px;
+  }
+  
+  .reviewItem {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  .reviwerContainer{
+    display:flex;
+    align-items:center ;
+    justify-content: space-between;
+    padding:10px 0;
+  }
+  .reviewerProfile{
+    display:flex;
+    align-items:center ;
+    gap:10px;
+  }
+  .reviwerImg{
+    width:40px;
+    height:40px;
+    background-color: gray;
+    border-radius: 50%;
+  }
+  .productQr img {
+    width: 150px;
+    height: 150px;
+  }
+  

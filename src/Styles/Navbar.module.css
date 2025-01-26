@@ -14,6 +14,19 @@
 }
 .link {
   margin: 0 20px;
+  position:relative;
+}
+.cartCount {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 12px;
+  min-width: 20px;
+  text-align: center;
 }
 .navLink {
   color: Black;

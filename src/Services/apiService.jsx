@@ -5,12 +5,12 @@ const url1 = "https://api.escuelajs.co/api/v1/products";
 const url = "https://dummyjson.com/products";
 export const getProductList = async () => {
   try {
-    const response = await axios.get(url1);
+    const response = await axios.get(url);
     // if(url){
     //   return response.data.products;
     // }
     // else{
-      return response.data;
+      return response.data.products;
     // }
     
   } catch (error) {
@@ -20,7 +20,7 @@ export const getProductList = async () => {
 
 export const getProduct = async (id) => {
   try {
-    const response = await axios.get(`${url1}/${id}`);
+    const response = await axios.get(`${url}/${id}`);
     return response.data;
   } catch (error) {
     throw error;
