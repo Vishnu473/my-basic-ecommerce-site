@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-export const checkUserCred = async() => {
+export const checkUserCred = async(username, password) => {
 
     //axios.post(url,data,config)
     //data - {}
@@ -11,20 +11,38 @@ export const checkUserCred = async() => {
     {
         const response = await axios.post('https://dummyjson.com/auth/login',
         {
-            username: 'emilys',
-            password: 'emilyspass',
-            expiresInMins: 30,
+            username: username,
+            password: password,
+            //expiresInMins: 60, //optional if given it takes time or default is 60
         },
         {
             headers: {
                 'Content-Type': 'application/json', // Request headers
             }
         });
-        console.log(response.data);
-        return response.data;
+        return response;
     }
     catch (error) {
-        console.error('Error:', error);
         throw error; // Handle error
     };
+}
+
+export const getRefreshAccessToken = async (refreshToken) => {
+    try {
+        const response = axios.post('https://dummyjson.com/auth/refresh',
+            {
+                refreshToken:refreshToken,
+                //expiresInMins: 30, //optionsl
+            },
+            {
+                headers:{
+                    'Content-Type': 'application/json',
+                },
+                withCredentials : true
+            }
+        );
+        return response;
+    } catch (error) {
+        throw error;
+    }
 }

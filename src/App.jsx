@@ -10,11 +10,10 @@ import RootLayout from "./Pages/RootLayout";
 import ProductList from "./Pages/ProductList";
 import About from "./Pages/About";
 import Cart from "./Pages/Cart";
-import Auth from "./Pages/Auth";
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
 import ProductDetail from "./Pages/ProductDetail";
-import CartContextProvider from "./Context/CartContextProvider";
+import User from "./Pages/User";
 
 const routes = createBrowserRouter([
   {
@@ -42,6 +41,10 @@ const routes = createBrowserRouter([
         element: <Cart />,
       },
       {
+        path:'user',
+        element: <User/>
+      },
+      {
         path: "auth",
         children: [
           {
@@ -56,6 +59,9 @@ const routes = createBrowserRouter([
       },
     ],
   },
+  // {
+  //   basename:'/my-basic-ecommerce-site'
+  // }
 ]);
 
 function App() {
